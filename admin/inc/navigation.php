@@ -17,6 +17,9 @@
             <a class="nav-link text-white mr-3" href="index.php?addCandidatePage=1">Add Candidate</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link text-white mr-3" href="index.php?canddetailsPage=1">candidate Details</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link text-white mr-3" href="logout.php">Logout</a>
         </li>
          </ul>

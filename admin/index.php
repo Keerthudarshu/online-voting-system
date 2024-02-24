@@ -15,6 +15,9 @@
     }else if(isset($_GET['viewResult']))
     {
         require_once("inc/viewResults.php");
+    }else if(isset($_GET['canddetailsPage']))
+    {
+        require_once("inc/cand_details.php");
     }
 
 ?>
