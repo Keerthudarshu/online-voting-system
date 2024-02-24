@@ -83,7 +83,7 @@
                                 <td><?php echo $row['candidate_details']; ?></td>
                                 <td><?php echo $election_name; ?></td>
                                 <td> 
-                                    <a href="#" class="btn btn-sm btn-warning"> Edit </a>
+                                <a href="#" class="btn btn-sm btn-warning" onclick="EditData(<?php echo $row['id']; ?>)"> Edit </a>
                                     <button class="btn btn-sm btn-danger" onclick="DeleteData(<?php echo $row['id']; ?>)"> Delete </button>
                                 </td>
                             </tr>   
@@ -110,6 +110,12 @@
         }
     }
 </script>
+<script>
+    const EditData = (e_id) => {
+        location.assign("edit_candidate.php?edit_id=" + e_id);
+    }
+</script>
+
 
 <?php 
 

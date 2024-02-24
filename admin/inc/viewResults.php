@@ -137,6 +137,11 @@
             </table>
             
         </div>
+        <button class="btn btn-primary" style="margin-left:20px;" onclick="printPage()">Print</button>
     </div>
-
+    <script>
+    function printPage() {
+        window.print();
+    }
+</script>
 
