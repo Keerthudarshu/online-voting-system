@@ -26,7 +26,7 @@
                                 <tr>
                                     <th> Photo </th>
                                     <th> Candidate Details </th>
-                                    <th> # of Votes </th>
+                                   
                                     <th> Action </th>
                                 </tr>
                             </thead>
@@ -47,7 +47,7 @@
                                     <tr>
                                         <td> <img src="<?php echo $candidate_photo; ?>" class="candidate_photo"> </td>
                                         <td><?php echo "<b>" . $candidateData['candidate_name'] . "</b><br />" . $candidateData['candidate_details']; ?></td>
-                                        <td><?php echo $totalVotes; ?></td>
+                                       
                                         <td>
                                     <?php
                                             $checkIfVoteCasted = mysqli_query($db, "SELECT * FROM votings WHERE voters_id = '". $_SESSION['user_id'] ."' AND election_id = '". $election_id ."'") or die(mysqli_error($db));    
