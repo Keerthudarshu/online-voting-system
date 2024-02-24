@@ -30,11 +30,21 @@
 
 ?>
 
+<?php 
+    if(isset($_GET['delete_id']))
+    {
+        $d_id = $_GET['delete_id'];
+        mysqli_query($db, "DELETE FROM candidate_details WHERE id = '". $d_id ."'") or die(mysqli_error($db));
+?>
+  <div class="alert alert-danger my-3" role="alert">
+            Candidate has been deleted successfully!
+        </div>
+<?php
+    }
+?>
+
 
 <div class="row my-3">
-    
-           
-
     <div class="col-8">
         <h3>Candidate Details</h3>
         <table class="table">
@@ -46,7 +56,6 @@
                     <th scope="col">Details</th>
                     <th scope="col">Election</th>
                     <th scope="col">Action </th>
-                    
                 </tr>
             </thead>
             <tbody>
@@ -69,23 +78,23 @@
                 ?>
                             <tr>
                                 <td><?php echo $sno++; ?></td>
-                                <td> <img src="<?php echo $candidate_photo; ?>" class="candidate_photo" />    </td>
+                                <td> <img src="<?php echo $candidate_photo; ?>" class="candidate_photo" /> </td>
                                 <td><?php echo $row['candidate_name']; ?></td>
                                 <td><?php echo $row['candidate_details']; ?></td>
                                 <td><?php echo $election_name; ?></td>
                                 <td> 
                                     <a href="#" class="btn btn-sm btn-warning"> Edit </a>
-                                    <a href="#" class="btn btn-sm btn-danger"> Delete </a>
+                                    <button class="btn btn-sm btn-danger" onclick="DeleteData(<?php echo $row['id']; ?>)"> Delete </button>
                                 </td>
                             </tr>   
                 <?php
                         }
-                    }else {
-            ?>
+                    } else {
+                ?>
                         <tr> 
-                            <td colspan="7"> No any candidate is added yet. </td>
+                            <td colspan="7"> No candidates have been added yet. </td>
                         </tr>
-            <?php
+                <?php
                     }
                 ?>
             </tbody>    
@@ -93,7 +102,14 @@
     </div>
 </div>
 
-
+<script>
+    const DeleteData = (e_id) => {
+        let c = confirm("Are you really want to delete it?");
+        if(c == true) {
+            location.assign("index.php?canddetailsPage=1&delete_id=" + e_id);
+        }
+    }
+</script>
 
 <?php 
 
@@ -122,40 +138,24 @@
                     // inserting into db
                     mysqli_query($db, "INSERT INTO candidate_details(election_id, candidate_name, candidate_details, candidate_photo, inserted_by, inserted_on) VALUES('". $election_id ."', '". $candidate_name ."', '". $candidate_details ."', '". $candidate_photo ."', '". $inserted_by ."', '". $inserted_on ."')") or die(mysqli_error($db));
 
-                    echo "<script> location.assign('index.php?canddetailsPage=1&added=1'); </script>";
+                    echo "<script> location.assign('index.php?addCandidatePage=1&added=1'); </script>";
 
 
                 }else {
-                    echo "<script> location.assign('index.php?canddetailsPage=1&failed=1'); </script>";                    
+                    echo "<script> location.assign('index.php?addCandidatePage=1&failed=1'); </script>";                    
                 }
             }else {
-                echo "<script> location.assign('index.php?canddetailsPage=1&invalidFile=1'); </script>";
+                echo "<script> location.assign('index.php?addCandidatePage=1&invalidFile=1'); </script>";
             }
         }else {
-            echo "<script> location.assign('index.php?canddetailsPage=1&largeFile=1'); </script>";
+            echo "<script> location.assign('index.php?addCandidatePage=1&largeFile=1'); </script>";
         }
 
         // Photograph Logic Ends
-        
-
-
-         // inserting into db
-         mysqli_query($db, "INSERT INTO candidate_details(election_id, candidate_name, candidate_details, candidate_photo, inserted_by, inserted_on) VALUES('". $election_id ."', '". $candidate_name ."', '". $candidate_details ."', '". $candidate_photo ."', '". $inserted_by ."', '". $inserted_on ."')") or die(mysqli_error($db));
-        
-         ?>
-                 <script> location.assign("index.php?canddetailsPage=1&added=1"); </script>
-         <?php
-     
-
-        
+    
     ?>
       <?php
 
     }
-
-
-
-
-
 
 ?>
