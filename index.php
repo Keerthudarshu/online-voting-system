@@ -47,7 +47,7 @@
 <html>
 <head>
 	<title>Login - Online Voting System</title>
-    <link rel="icon" href="http://localhost/onvot/online-voting-system/assets/images/logo.gif" type="image/x-icon">
+    <link rel="icon" href="../assets/images/logo.gif" type="image/x-icon"sizes="192x192">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/login.css">
@@ -79,7 +79,7 @@
                                     <div class="input-group-append">
                                         <span class="input-group-text"><i class="fas fa-key"></i></span>
                                     </div>
-                                    <input type="text" name="su_contact_no" class="form-control input_pass" placeholder="Contact #" required />
+                                    <input type="text" name="su_contact_no" class="form-control input_pass" placeholder="Contact " pattern="[0-9]{10}" required required />
                                 </div>
                                 <div class="input-group mb-2">
                                     <div class="input-group-append">
@@ -114,7 +114,7 @@
                                     <div class="input-group-append">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
-                                    <input type="text" name="contact_no" class="form-control input_user" placeholder="Contact No" required />
+                                    <input type="text" name="contact_no" class="form-control input_user" placeholder="Contact No" pattern="[0-9]{10}"required />
                                 </div>
                                 <div class="input-group mb-2">
                                     <div class="input-group-append">
@@ -132,9 +132,7 @@
                             <div class="d-flex justify-content-center links text-white">
                                 Don't have an account? <a href="?sign-up=1" class="ml-2 text-white">Sign Up</a>
                             </div>
-                            <div class="d-flex justify-content-center links">
-                                <a href="#" class="text-white">Forgot your password?</a>
-                            </div>
+                           
                         </div>
                 <?php
                     }
