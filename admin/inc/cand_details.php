@@ -101,7 +101,11 @@
         </table>
     </div>
 </div>
-
+<style>
+    .col-8{
+        margin-left: 300px;
+    }
+</style>
 <script>
     const DeleteData = (e_id) => {
         let c = confirm("Are you really want to delete it?");

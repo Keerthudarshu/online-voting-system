@@ -97,7 +97,9 @@
     </div>
 </div>
 
-
+<br><br>
+<br><br>
+<br><br>
 <script>
     const DeleteData = (e_id) => 
     {

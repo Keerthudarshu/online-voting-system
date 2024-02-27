@@ -79,12 +79,16 @@
             </div>
             <input type="submit" value="Add Candidate" name="addCandidateBtn" class="btn btn-success" />
         </form>
-    </div>   
-
-    
+    </div>    
 </div>
-
-
+<style>
+    .col-4{
+        margin-left: 500px;;
+        margin-top: 40px;
+    }
+</style>
+<br><br>
+<br>
 
 <?php 
 
