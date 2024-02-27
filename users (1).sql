@@ -90,3 +90,23 @@ INSERT INTO `candidate_details` (`id`, `election_id`, `candidate_name`, `candida
 (5, 4, 'Keerthan ', 'be', '../assets/images/candidate_photos/71014947057_389212304734.jpg', 'Keertha', '2024-02-24'),
 (6, 4, 'gagan', 'be', '../assets/images/candidate_photos/22637748292_272378767335.png', 'Keertha', '2024-02-24'),
 (7, 4, 'ashith', 'be', '../assets/images/candidate_photos/89936291524_1046377788056709694951_35565821742download.jpeg', 'Keertha', '2024-02-24');
+
+
+
+INSERT INTO `candidate_details` (`id`, `election_id`, `candidate_name`, `candidate_details`, `candidate_photo`, `inserted_by`, `inserted_on`) VALUES
+(5, 5, 'Keerthan  vij', 'computer science', '../assets/images/candidate_photos/76840011005_589818704024.jpg', 'Keertha', '2024-02-24'),
+(6, 4, 'gagan hhk', 'bEE', '../assets/images/candidate_photos/22637748292_272378767335.png', 'Keertha', '2024-02-24'),
+(7, 4, 'ashith', 'be', '../assets/images/candidate_photos/89936291524_1046377788056709694951_35565821742download.jpeg', 'Keertha', '2024-02-24'),
+(9, 6, 'gaga', 'mtch', '../assets/images/candidate_photos/75729769311_527352287974.jpg', 'Keertha', '2024-02-27'),
+(10, 6, 'keerthan', 'mtch', '../assets/images/candidate_photos/13312515939_68165172935.png', 'Keertha', '2024-02-27'),
+(11, 7, 'ashi', 'player', '../assets/images/candidate_photos/88292079811_69142798964download.jpeg', 'Keertha', '2024-02-27'),
+(12, 7, 'shershanth', 'player', '../assets/images/candidate_photos/89094422063_729056924475.png', 'Keertha', '2024-02-27');
+
+
+INSERT INTO `elections` (`id`, `election_topic`, `no_of_candidates`, `starting_date`, `ending_date`, `status`, `inserted_by`, `inserted_on`) VALUES
+(4, 'abc', 3, '2024-02-23', '2024-02-25', 'Expired', 'Keertha', '2024-02-23'),
+(5, 'college election', 5, '2024-02-16', '2024-02-17', 'Expired', 'Keertha', '2024-02-24'),
+(6, 'food', 3, '2024-02-27', '2024-02-29', 'Active', 'Keertha', '2024-02-27'),
+(7, 'kabadi', 7, '2024-02-27', '2024-02-29', 'Active', 'Keertha', '2024-02-27');
+
+--
