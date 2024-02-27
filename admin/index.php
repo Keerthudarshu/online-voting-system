@@ -18,6 +18,9 @@
     }else if(isset($_GET['canddetailsPage']))
     {
         require_once("inc/cand_details.php");
+    }else if(isset($_GET['editCandidate']))
+    {
+        require_once("inc/edit_candidate.php");
     }
 
 ?>

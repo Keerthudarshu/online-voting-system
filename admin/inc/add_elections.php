@@ -78,7 +78,7 @@
                                 <td><?php echo $row['ending_date']; ?></td>
                                 <td><?php echo $row['status']; ?></td>
                                 <td> 
-                                    <a href="#" class="btn btn-sm btn-warning"> Edit </a>
+                                   
                                     <button class="btn btn-sm btn-danger" onclick="DeleteData(<?php echo $election_id; ?>)"> Delete </button>
                                 </td>
                             </tr>

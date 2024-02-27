@@ -2,7 +2,7 @@
     <div class="row bg-black text-center text-white">
         <div class="col-12 my-3">
             <p> &copy; Copyright 2022 - All Rights Reserved  <br />
-                Developed by 5th BE
+                Developed by| 5th BE
             </p>
         </div>
     </div>

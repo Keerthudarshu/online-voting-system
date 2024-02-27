@@ -41,6 +41,7 @@
         </div>
 <?php
     }
+    
 ?>
 
 
@@ -83,8 +84,15 @@
                                 <td><?php echo $row['candidate_details']; ?></td>
                                 <td><?php echo $election_name; ?></td>
                                 <td> 
-                                <a href="#" class="btn btn-sm btn-warning" onclick="EditData(<?php echo $row['id']; ?>)"> Edit </a>
-                                    <button class="btn btn-sm btn-danger" onclick="DeleteData(<?php echo $row['id']; ?>)"> Delete </button>
+                                <a class="btn btn-sm btn-warning" onclick="EditData(<?php echo $row['id']; ?>)">Edit</a>
+
+                                <script>
+    function EditData(candidateId) {
+        console.log('EditData called with candidateId:', candidateId);
+        window.location.href = 'edit_candidate.php?editCandidate=' + candidateId;
+    }
+</script>
+                                   <button class="btn btn-sm btn-danger" onclick="DeleteData(<?php echo $row['id']; ?>)"> Delete </button>
                                 </td>
                             </tr>   
                 <?php
@@ -114,11 +122,7 @@
         }
     }
 </script>
-<script>
-    const EditData = (e_id) => {
-        location.assign("edit_candidate.php?edit_id=" + e_id);
-    }
-</script>
+
 
 
 <?php 

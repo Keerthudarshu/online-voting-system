@@ -47,6 +47,8 @@
 <html>
 <head>
 	<title>Login - Online Voting System</title>
+    <link rel="icon" href="http://localhost/onvot/online-voting-system/assets/images/logo.gif" type="image/x-icon">
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/style.css">
