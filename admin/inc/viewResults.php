@@ -2,7 +2,13 @@
     $election_id = $_GET['viewResult'];
 
 ?>
-
+<style>
+        /* Adjust the height of navbar and footer as needed */
+        .col-12 {
+            max-height: 380px; /* Set the maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+</style>
 <div class="row my-3">
         <div class="col-12">
             <h3> Election Results </h3>
@@ -139,6 +145,7 @@
         </div>
         <button class="btn btn-primary" style="margin-left:20px;" onclick="printPage()">Print</button>
     </div>
+   
     <script>
     function printPage() {
         window.print();

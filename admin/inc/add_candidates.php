@@ -71,7 +71,7 @@
             <div class="form-group">
                 <input type="text" name="candidate_name" placeholder="Candidate Name" class="form-control" required />
             </div>
-            <div class="form-group">
+            <div class="form-group" style="margin-top:20px;">
                 <input type="file" name="candidate_photo" class="form-control" required />
             </div>
             <div class="form-group">

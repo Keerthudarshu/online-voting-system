@@ -21,8 +21,13 @@
 ?>
 
 
-
-
+<style>
+        /* Adjust the height of navbar and footer as needed */
+        .col-8 {
+            max-height: 300px; /* Set the maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+</style>
 <div class="row my-3">
     <div class="col-4">
         <h3>Add New Election</h3>
@@ -58,7 +63,7 @@
                     
                 </tr>
             </thead>
-            <tbody>
+            <tbody >
                 <?php 
                     $fetchingData = mysqli_query($db, "SELECT * FROM elections") or die(mysqli_error($db)); 
                     $isAnyElectionAdded = mysqli_num_rows($fetchingData);
@@ -70,6 +75,7 @@
                         {
                             $election_id = $row['id'];
                 ?>
+               
                             <tr>
                                 <td><?php echo $sno++; ?></td>
                                 <td><?php echo $row['election_topic']; ?></td>
@@ -82,6 +88,7 @@
                                     <button class="btn btn-sm btn-danger" onclick="DeleteData(<?php echo $election_id; ?>)"> Delete </button>
                                 </td>
                             </tr>
+                            
                 <?php
                         }
                     }else {
@@ -99,7 +106,8 @@
 
 <br><br>
 <br><br>
-<br><br>
+<br>
+
 <script>
     const DeleteData = (e_id) => 
     {

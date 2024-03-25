@@ -112,7 +112,10 @@
 <style>
     .col-8{
         margin-left: 300px;
-    }
+   
+            max-height:400px; /* Set the maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
 </style>
 <script>
     const DeleteData = (e_id) => {
@@ -122,6 +125,10 @@
         }
     }
 </script>
+
+
+
+<br>
 
 
 
